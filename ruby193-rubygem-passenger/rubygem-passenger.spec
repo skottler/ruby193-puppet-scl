@@ -22,7 +22,7 @@
 
 Summary: Passenger Ruby web application server
 Name: %{?scl_prefix}rubygem-%{gem_name}
-Version: 4.0.7
+Version: 4.0.8
 Release: 1%{?dist}
 Group: System Environment/Daemons
 # Passenger code uses MIT license.
@@ -403,6 +403,9 @@ rake test --trace ||:
 %endif
 
 %changelog
+* Sun Aug 25 2013 Sam Kottler <shk@redhat.com> 4.0.8-1
+- Fix the source URL (shk@redhat.com)
+
 * Sun Aug 25 2013 Sam Kottler <shk@redhat.com> 4.0.7-1
 - Add passenger package (shk@redhat.com)
 
