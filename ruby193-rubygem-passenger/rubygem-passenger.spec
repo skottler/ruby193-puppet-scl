@@ -22,7 +22,7 @@
 
 Summary: Passenger Ruby web application server
 Name: %{?scl_prefix}rubygem-%{gem_name}
-Version: 4.0.6
+Version: 4.0.7
 Release: 1%{?dist}
 Group: System Environment/Daemons
 # Passenger code uses MIT license.
@@ -182,7 +182,7 @@ rebuilding this package.
 
 
 %prep
-%setup -q -n passenger-%{version}
+%setup -q -n rubygem-passenger-%{version}
 
 #%patch1   -p1 -b .force-native
 %patch2   -p1 -b .include-sys-types
@@ -403,6 +403,9 @@ rake test --trace ||:
 %endif
 
 %changelog
+* Sun Aug 25 2013 Sam Kottler <shk@redhat.com> 4.0.7-1
+- Add passenger package (shk@redhat.com)
+
 * Sun Aug 25 2013 Sam Kottler <shk@redhat.com> 4.0.6-1
 - new package built with tito
 
