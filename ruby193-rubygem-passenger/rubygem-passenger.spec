@@ -35,7 +35,7 @@ License: Boost and BSD and BSD with advertising and MIT and zlib
 URL: http://www.modrails.com
 BuildRoot: %{_tmppath}/%{pkg_name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
-Source: http://phusion-passenger.googlecode.com/files/passenger-%{version}.tar.gz
+Source: http://s3.amazonaws.com/phusion-passenger/releases/passenger-%{version}.tar.gz
 Source1: passenger.logrotate
 Source2: rubygem-passenger.tmpfiles
 Source10: apache-passenger.conf.in
@@ -182,7 +182,7 @@ rebuilding this package.
 
 
 %prep
-%setup -q -n rubygem-passenger-%{version}
+%setup -q -n passenger-%{version}
 
 #%patch1   -p1 -b .force-native
 %patch2   -p1 -b .include-sys-types
